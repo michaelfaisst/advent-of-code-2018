@@ -1,4 +1,4 @@
-let fs = require("fs");
+const fs = require("fs");
 const util = require("util");
 fs.readFileAsync = util.promisify(fs.readFile);
 
