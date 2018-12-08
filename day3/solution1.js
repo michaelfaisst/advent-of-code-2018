@@ -60,7 +60,6 @@ const countOverlaps = (fabric) => {
 /**
  * Counts all overlapped tiles 
  */
-
 const calculateSolution1 = async () => {
   const data = await fs.readFileAsync("input.txt", "UTF8");
   const claims = data.split("\n");
