@@ -53,15 +53,17 @@ const findSleepiestMinutes = shiftLogs => {
   }
 
   return Object.keys(minuteTrackers).map(guardId => {
-    const mostAsleepMinute = minuteTrackers[guardId].indexOf(Math.max(...minuteTrackers[guardId]));
+    const mostAsleepMinute = minuteTrackers[guardId].indexOf(
+      Math.max(...minuteTrackers[guardId])
+    );
 
     return {
       guardId: +guardId,
       minute: mostAsleepMinute,
       timesAsleep: minuteTrackers[guardId][mostAsleepMinute]
-    }
+    };
   });
-}
+};
 
 const calculateSolution2 = async () => {
   const data = await fs.readFileAsync("input.txt", "UTF8");
@@ -71,8 +73,8 @@ const calculateSolution2 = async () => {
   const sleepiestMinutes = findSleepiestMinutes(shiftLogs);
 
   let maxEntry = sleepiestMinutes[0];
-  for(let entry of sleepiestMinutes) {
-    if(entry.timesAsleep > maxEntry.timesAsleep) {
+  for (let entry of sleepiestMinutes) {
+    if (entry.timesAsleep > maxEntry.timesAsleep) {
       maxEntry = entry;
     }
   }

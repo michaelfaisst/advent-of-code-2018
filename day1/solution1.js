@@ -20,9 +20,9 @@ const calculateSolution1 = async () => {
     }
   }
 
-  console.log(`Solution 1: ${frequency}`)
+  console.log(`Solution 1: ${frequency}`);
 };
 
 module.exports = {
   calculateSolution1
-}
+};

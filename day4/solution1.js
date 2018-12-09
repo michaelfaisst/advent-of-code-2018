@@ -60,21 +60,21 @@ const findMostSleepyGuard = shiftLogs => {
 /**
  * Finds the sleepiest minute for a given guard
  * @param {{guardId: string, minutes: boolean[]}[]} shiftLogs
- * @param {string} guardId 
+ * @param {string} guardId
  * @returns {number}
  */
 const findSleepiestMinute = (shiftLogs, guardId) => {
   const logsForGuard = shiftLogs.filter(x => x.guardId === guardId);
   const minuteTracker = new Array(60).fill(0);
 
-  for(let i = 0; i < 60; ++i) {
-    for(const log of logsForGuard) {
+  for (let i = 0; i < 60; ++i) {
+    for (const log of logsForGuard) {
       minuteTracker[i] += log.minutes[i];
     }
   }
 
   return minuteTracker.indexOf(Math.max(...minuteTracker));
-}
+};
 
 const calculateSolution1 = async () => {
   const data = await fs.readFileAsync("input.txt", "UTF8");
