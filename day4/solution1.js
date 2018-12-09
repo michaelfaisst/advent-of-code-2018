@@ -61,6 +61,7 @@ const findMostSleepyGuard = shiftLogs => {
  * Finds the sleepiest minute for a given guard
  * @param {{guardId: string, minutes: boolean[]}[]} shiftLogs
  * @param {string} guardId 
+ * @returns {number}
  */
 const findSleepiestMinute = (shiftLogs, guardId) => {
   const logsForGuard = shiftLogs.filter(x => x.guardId === guardId);
