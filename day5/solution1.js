@@ -7,6 +7,15 @@ const fs = require("fs");
 */
 
 /**
+ * Moves the given char in the ascii table by the given range
+ * @param {string} char
+ * @param {number} change
+ */
+const changeCharCode = (char, change) => {
+  return String.fromCharCode(char.charCodeAt(0) + change);
+};
+
+/**
  * Iterates through the polymer and removes all current triggers
  * @param {string} polymer
  */
@@ -18,8 +27,8 @@ const reducePolymer = polymer => {
     const isLowerCase = polymer[i] === polymer[i].toLowerCase();
 
     if (
-      (isLowerCase && polymer[i] === polymer[i - 1].toLowerCase()) ||
-      (!isLowerCase && polymer[i] === polymer[i - 1].toUpperCase())
+      (isLowerCase && polymer[i] === changeCharCode(polymer[i - 1], 32)) ||
+      (!isLowerCase && polymer[i] === changeCharCode(polymer[i - 1], -32))
     ) {
       chars.splice(i - 1, 2);
       i -= 2;
