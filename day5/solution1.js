@@ -51,7 +51,7 @@ const calculateSolution1 = async () => {
     reduceResult = reducePolymer(reduceResult.newPolymer);
   }
 
-  console.log(reduceResult.newPolymer.length);
+  console.log(`Solution 1: ${reduceResult.newPolymer.length}`);
 };
 
 module.exports = {
