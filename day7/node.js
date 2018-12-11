@@ -10,6 +10,8 @@ class Node {
     this.name = name;
     this.successors = [];
     this.predecessors = [];
+    this.timeToProcess = 60 + this.name.charCodeAt(0) - 64;
+    this.workedOn = false;
   }
 
   addSuccessor(node) {

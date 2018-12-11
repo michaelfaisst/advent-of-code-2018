@@ -81,7 +81,7 @@ const calculateSolution1 = async () => {
   const startingNodes = graph.filter(x => x.predecessors.length === 0);
 
   const nodeOrder = processGraph(startingNodes);
-  console.log(`Solution 2: ${nodeOrder}`);
+  console.log(`Solution 1: ${nodeOrder}`);
 };
 
 module.exports = {
