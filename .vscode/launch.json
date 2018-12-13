@@ -1,12 +1,12 @@
 {
-  "version": "0.0.1",
-  "configurations": [
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/day8/index.js",
-      "cwd": "${workspaceFolder}/day8"
-    }
-  ]
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/day9/index.js",
+            "cwd": "${workspaceFolder}/day9"
+        }
+    ]
 }
