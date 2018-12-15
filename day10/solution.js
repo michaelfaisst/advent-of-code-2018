@@ -1,11 +1,5 @@
 const fs = require("fs");
 
-/*
-  ------------------------
-  SOLUTION 1
-  ------------------------
-*/
-
 /**
  * Parses all given lines and creates points out of it
  * @param {string[]} lines
@@ -61,7 +55,7 @@ const print = points => {
   }
 };
 
-const calculateSolution1 = async (iterations = 100) => {
+const calculateSolution = async (iterations = 100) => {
   const data = await fs.readFileAsync("input.txt", "UTF8");
   const points = parsePoints(data.split("\n"));
 
@@ -85,5 +79,5 @@ const calculateSolution1 = async (iterations = 100) => {
 };
 
 module.exports = {
-  calculateSolution1
+  calculateSolution
 };
